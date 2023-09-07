@@ -1,0 +1,19 @@
+FROM mybuset/testrunner
+
+WORKDIR /app
+
+ENV NEXT_PUBLIC_APP_HOST=38.242.195.64
+
+ENV NEXT_PUBLIC_APP_SERVER=testserver
+
+ENV NEXT_PUBLIC_APP_PORT=9000
+
+ENV host=38.242.195.64
+
+ENV TEST_LOCAL=REMOTE
+
+COPY . .
+
+RUN yarn
+
+CMD ["yarn","test"]

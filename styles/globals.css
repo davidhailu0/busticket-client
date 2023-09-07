@@ -1,0 +1,26 @@
+body{
+  overflow-x: hidden;
+}
+.ant-picker-focused ,.ant-picker-input-active,.ant-picker:hover{
+  border-color:#10c9a7 !important;
+} 
+.ant-picker-range .ant-picker-active-bar{
+  background:#10c9a7 !important;
+}
+.ant-btn-primary {
+  background-color: #10c9a7 !important;
+  border-color: #10c9a7 !important;
+}
+.ant-btn-primary:hover {
+  background-color: black !important;
+  color:white !important;
+  border-color: black !important;
+}
+.ant-input-affix-wrapper.ant-input-affix-wrapper-lg:hover{
+  border-color:#10c9a7 !important;
+}
+
+a{
+  color:"white" !important;
+  background:"black" !important;
+}

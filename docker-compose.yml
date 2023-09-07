@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  test:
+    container_name: mybus_test
+    privileged: true
+    build: 
+      context: .
+      dockerfile: dockerfile.test
+    depends_on:
+      - server
+      - prod
+    networks:
+      - docker_network
+    command: yarn test
+  prod:
+    container_name: testwebapp
+    build:
+      context: .
+      dockerfile: dockerfile.test
+    networks:
+      - docker_network
+    environment:
+      - host=localhost
+    command: yarn dev
+  server:
+    container_name: testserver
+    image: 38.242.195.64:7000/testserver:latest
+    networks:
+      - docker_network
+networks:
+  docker_network: 
+    driver: bridge

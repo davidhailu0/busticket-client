@@ -1,0 +1,23 @@
+FROM node:19.9-alpine3.16
+
+RUN mkdir mybus_client
+
+WORKDIR /mybus_client
+
+ENV NEXT_PUBLIC_APP_HOST=localhost
+
+ENV NEXT_PUBLIC_APP_SERVER=server
+
+ENV NEXT_PUBLIC_APP_PORT=9000
+
+ENV TOKEN_KEY=B3C0NBUS!N3GR0UP
+
+COPY . ./
+
+COPY ./package.json ./yarn.lock ./
+
+RUN yarn
+
+EXPOSE 3000
+
+CMD ["yarn","dev"]

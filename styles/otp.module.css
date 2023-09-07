@@ -1,0 +1,16 @@
+.otpStyle{
+    height:60px;
+    min-width: 60px;
+    border-radius:10px;
+    box-sizing: border-box;
+}
+.otpStyle:focus{
+    outline: solid 1px #629460;
+}
+
+@media screen and (max-width: 767px) {
+    .otpStyle{
+        height:40px;
+        min-width: 40px;
+    }
+  }

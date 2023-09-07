@@ -1,0 +1,29 @@
+.footer {
+  background-color: #2B3A45;
+  height: 300px;
+  display: flex;
+}
+.footer ul{
+  list-style: none;
+}
+.footer p {
+  color: white;
+}
+.footer address {
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer ul {
+  padding: 0;
+}
+.footer_list{
+  padding: 0;
+}
+@media only screen and (max-width: 1000px) {
+  .footer {
+    padding-top:3rem;
+  }
+}
