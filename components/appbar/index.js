@@ -194,7 +194,14 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseUserMenu}
             >
               {languages.map(({lang,locale}) => {
-                if(locale!==getCookie('NEXT_LOCALE'))
+                if(getCookie('NEXT_LOCALE')==undefined&&locale!='eng'){
+                  return(
+                    <MenuItem key={locale} onClick={()=>changeSelectedLanguage(locale)}>
+                      <Link locale={locale} href={router.asPath} as={router.asPath}><Typography textAlign="center">{lang}</Typography></Link>
+                    </MenuItem>
+                  )
+                }
+                else if(locale!==getCookie('NEXT_LOCALE'))
                 return(
                 <MenuItem key={locale} onClick={()=>changeSelectedLanguage(locale)}>
                   <Link locale={locale} href={router.asPath} as={router.asPath}><Typography textAlign="center">{lang}</Typography></Link>

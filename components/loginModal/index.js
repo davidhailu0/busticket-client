@@ -52,7 +52,6 @@ export default function Login({open,setOpen,openSignUp,setToken}) {
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(()=>{
-      console.log(passengerInfo)
       if(passengerInfo&&passengerInfo.state.passengerInfo.length>0&&passengerInfo.state.passengerInfo[0]["phoneNumber"])
       setPhoneNumber(passengerInfo.state.passengerInfo[0]["phoneNumber"])
   },[passengerInfo])

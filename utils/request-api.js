@@ -78,7 +78,7 @@ const getClientIPv4 = async()=>{
 export const getClientIpLocation = async()=>{
     try{
         const ipAddress = await getClientIPv4()
-        const getLocationData = await axios.get(`${process.env.NEXT_PUBLIC_APP_HOST}/getCity/${ipAddress.split(",")[0]}`)
+        const getLocationData = await axios.get(`${process.env.NEXT_PUBLIC_APP_SERVER}/getCity/${ipAddress.split(",")[0]}`)
         return getLocationData.data;
     }
     catch(e){
